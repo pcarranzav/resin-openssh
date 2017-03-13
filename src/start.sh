@@ -5,6 +5,7 @@ if [ "$INITSYSTEM" != "on" ]; then
   /usr/sbin/sshd -p 22 &
 fi
 
+ngrok authtoken $NGROK_AUTH_TOKEN
 ngrok tcp 22 &
 
 echo "This is where your application would start..."
