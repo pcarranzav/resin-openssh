@@ -5,6 +5,8 @@ if [ "$INITSYSTEM" != "on" ]; then
   /usr/sbin/sshd -p 22 &
 fi
 
+ngrok -proto=tcp 22 &
+
 echo "This is where your application would start..."
 while : ; do
   echo "waiting"
