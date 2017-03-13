@@ -6,7 +6,7 @@ if [ "$INITSYSTEM" != "on" ]; then
 fi
 
 ngrok authtoken $NGROK_AUTH_TOKEN
-ngrok tcp 22
+ngrok tcp --log-format "json" 22
 
 echo "This is where your application would start..."
 while : ; do
