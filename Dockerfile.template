@@ -17,7 +17,7 @@ RUN mkdir /var/run/sshd \
     && sed -i 's/UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 
 RUN cd /bin \
-	&& curl -L https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > ngrok.zip \
+	&& curl -L https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > ngrok.zip \
 	&& unzip /bin/ngrok.zip \
 	&& rm -rf ngrok.zip
 
