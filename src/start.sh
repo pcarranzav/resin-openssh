@@ -6,10 +6,11 @@ if [ "$INITSYSTEM" != "on" ]; then
 fi
 
 ngrok authtoken $NGROK_AUTH_TOKEN
-ngrok tcp --log stdout --log-format "json" 22
+ngrok tcp --log stdout --log-format "json" 22 &
 
 echo "This is where your application would start..."
 while : ; do
   echo "waiting"
-  sleep 60
+  curl "http://127.0.0.1:4040/api/tunnels"
+  sleep 10
 done
